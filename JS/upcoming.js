@@ -1,5 +1,5 @@
 // for get all match list
-//let url = "https://api.cricapi.com/v1/matches?apikey=c001618f-cade-4110-b0de-df212a4a765b&offset=0";
+//apikey=c001618f-cade-4110-b0de-df212a4a765b;
 let url = "https://api.cricapi.com/v1/cricScore?apikey=8f668344-ae5d-4918-af0e-7eedce4c213f";
 
 let mainarrangement = document.querySelector('#mainarrange');
@@ -7,9 +7,15 @@ let mainarrangement = document.querySelector('#mainarrange');
        fetch(url)
        .then((response) => {
          response.json().then((data) => {
-           for (result of data.data) {
-             console.log(result);
-             createcardview(result);
+            console.log(data);
+           let i = 0;
+           for (result of data.data.reverse()) {
+             if(result.ms == "fixture" && result.matchType != "test" && i < 32)
+             {
+                console.log('create cardview calling' + i);
+                createcardview(result);
+                i++;
+             }
            }
          });
        })
@@ -17,17 +23,7 @@ let mainarrangement = document.querySelector('#mainarrange');
          console.error('Error:', error);
        });
 
-function nomatch() {
-  let element = document.getElementsByClassName("no-match");
-  element[0].style.display = "none";
-}
-
-function createcardview(result) {
-    if(result.ms == "live" && result.matchType != "test" 
-        && !result.status.includes("Match not started") 
-          && !result.status.includes("No result"))
-    {
-      nomatch();
+   function createcardview(result) {
       let matchcard = document.createElement('div');
       matchcard.classList.add('matchcard');
       matchcard.id = result.id;
@@ -41,7 +37,7 @@ function createcardview(result) {
       let teamspan = document.createElement('span');
       teamspan.innerText = `${result.t1.replace(/\[.*?\]/g, '').trim()} vs ${result.t2.replace(/\[.*?\]/g, '').trim()}`; 
       team.append(teamspan);
-
+      
       let timing = document.createElement('div');
       timing.id = 'timing';
 
@@ -95,14 +91,13 @@ function createcardview(result) {
 
       let status = document.createElement('div');
       status.classList.add('status');
-      status.classList.add('live');
+      status.classList.add('upcoming');
 
       matchcard.append(matchinfo);
       matchcard.append(status);
       mainarrangement.append(matchcard);
 
       matchcard.addEventListener('click', function() {
-        window.location.href = `HTML/scorecard.html?Id=${matchcard.id}`;
+        window.location.href = `scorecard.html?Id=${matchcard.id}`;
       });   
-    }    
 }   
