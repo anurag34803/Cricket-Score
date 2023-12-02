@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.upcoming {
+    background-color:#e41616;
+}
+
+.live {
+    background-color: green;
+}
+
+.complete {
+    background-color: #4a4a4a;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    align-items: center;
+    height: 50px;
+    border-bottom: 1px solid rgb(103, 71, 71);
+    width: 80%;
+}
+
+h3{
+    margin-left: 100px;
+}
+
+h3:hover{
+    color: black;
+    transition: 0.3s ease-out;
+    transform: scale(1.2);
+}
+
+.option {
+    display: flex;
+    margin-right: 50px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 600px;
+
+}
+
+.option a {
+    text-decoration: none;
+    color: rgb(28, 16, 16);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+/* footer */
+
+.container {
+    margin-inline: auto;
+    padding-inline: 20px;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container{
+    width: 80%;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.link-column{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.subfooter{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 1px;
+}
+.subfooter-container{
+    justify-content: center;
+    gap: 30px;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+    width: 80%;
+    height: 40px;
+}
+
+.hover-link {
+    color: #0b0f12;
+    text-decoration: none;
+
+}
+
+.hover-link:hover {
+    color: black;
+    transition: 0.3s ease-out;
+    transform: scale(1.2);
+    /* transition-delay: .1s;
+    transition-duration: .5s; */
+}
