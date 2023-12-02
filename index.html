@@ -4,53 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="CSS/navbar.css"/>
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
+
 <body>
-  <nav class="nav">
-    <div class="logo">ram</div>
-    <div class="oth">shyam</div>
-  </nav>
+    <nav>
+        <div class="navbar">
+            <h3>CricZone</h3>
+            <div class="option">
+                <a href="" class="hover-link">Live Score</a>
+                <a href="HTML/upcoming.html" class="hover-link">Home</a>
+                <a href="HTML/result.html" class="hover-link">Result</a>
+                <a href="#" class="hover-link">Series</a>
+                <a href="#" class="hover-link">Team</a>
+                <a href="#" class="hover-link">News</a>
+                <i class="fa-solid fa-magnifying-glass hover-link icon" onclick="performSearch()"></i>
+            </div>
+        </div>
+    </nav>
 
   <main>
     <div id="mainarrange">
-        <div class="matchcard">
-           
-            <!-- <div id="matchinfo">
+         <!-- <div class="matchcard">
+            <div id="matchinfo">
                 <div class="teams">
-                    <span>India vs Australia</span>
+                    <span>Namibia vs Nigeria</span>
                 </div>
     
-                <div class="venue" id="timing">
-                    <span>12th Match 2023-11-24</span>
-                </div>
-    
-                <div class="venue" id="ground">
-                    <span>Chukkapalli Pitchaiah Cricket Ground, Mulapadu, Vijayawada</span>
+                <div id="timing">
+                    <span>T-20, 2023-11-24</span>
                 </div>
     
                 <div class="line"></div>
     
                 <div class="score_info">
                     <span id="t1name">IND</span>
-                    <span id="t1score">359-3 (46.5 Ovs)</span>
+                    <span id="t1score"></span>
                 </div>
     
                 <div class="score_info">
                     <span id="t2name">NED</span>
-                    <span id="t2score"></span>
+                    <span id="t2score">170/2 (16 Ovs)</span>
                 </div>
     
-                <div id="result">India Opt to Bowl</div>
+                <div id="result">Kenya Opt to ball</div>
             </div>
-            
-
             <div class="status"></div>
         </div> -->
     </div>
-
   </main>
-  
+
+  <div class="no-match">
+    <span>Currently there is no live match</span>
+  </div>
+
+  <footer>
+    <div class="container flex footer-container">
+        <div class="link-column flex">
+            <h4>MOBILE SITE & APPS</h4>
+            <a href="#" class="hover-link">www.criczone.com</a>
+            <a href="#" class="hover-link">IOS</a>
+            <a href="#" class="hover-link">android</a>
+
+        </div>
+        <div class="link-column flex">
+            <h4>FOLLOW US ON </h4>
+            <a href="#" class="hover-link">facebook</a>
+            <a href="#" class="hover-link">Twitter</a>
+            <a href="#" class="hover-link">Instagram</a>
+            <a href="#" class="hover-link">telegram</a>
+
+        </div>
+        <div class="link-column flex">
+            <h4>COMPANY</h4>
+            <a href="#" class="hover-link">Careers</a>
+            <a href="#" class="hover-link">Advertise</a>
+            <a href="#" class="hover-link">Privacy Policy</a>
+            <a href="#" class="hover-link">Terms of Use</a>
+            <a href="#" class="hover-link">CricZone TV Ads</a>
+
+        </div>
+    </div>
+</footer>
+
+<div class="subfooter">
+    <div class="container flex subfooter-container">
+        <a href="#" class="hover-link">Privacy policy</a>
+        <a href="#" class="hover-link">Terms & Condition</a>
+        <a href="#" class="hover-link">Security Information</a>
+        <a href="#" class="hover-link">.<i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover-link">.<i class="fa-brands fa-twitter"></i></a>
+    </div>
+</div>
   <script src="/JS/index.js"></script>
 </body>
 </html>
