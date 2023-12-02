@@ -9,12 +9,28 @@
 
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" href="/css/navbar.css"/>
     <link rel="stylesheet" href="/css/scorecard.css"/>
 
   </head>
   <body>
+    <nav>
+        <div class="navbar">
+            <h3>CricZone</h3>
+            <div class="option">
+                <a href="/index.html" class="hover-link">Live Score</a>
+                <a href="upcoming.html" class="hover-link">Home</a>
+                <a href="result.html" class="hover-link">Result</a>
+                <a href="#" class="hover-link">Series</a>
+                <a href="#" class="hover-link">Team</a>
+                <a href="#" class="hover-link">News</a>
+                <i class="fa-solid fa-magnifying-glass hover-link icon" onclick="performSearch()"></i>
+            </div>
+        </div>
+    </nav>
 
     <div class="main">
+
         <div class="status"></div>
 
         <div class="matchinfo">
@@ -37,15 +53,15 @@
         <div class="scoreboards">
             <div class="t1scorecard">
                 <div class="total">
-                    <span id="t1name">CSK</span>
-                    <span id="t1score">124-9 (20 Over)</span>
+                    <span id="t1name"></span>
+                    <span id="t1score"></span>
                 </div>
 
                 <table class="team1batsman">
 
                     <thead>
                         <tr>
-                            <th class="text-left">Batter</th>
+                            <th class="text-left first-th">Batter</th>
                             <th id="dismissal-text" class="text-right"></th>
                             <th id="R" class="text-right">R</th>
                             <th id="B" class="text-right">B</th>
@@ -57,32 +73,23 @@
                     
 
                     <tbody>
-                        <!-- <tr>
-                            <td id="batsman-name" class="text-left">Radha Yadav</td>
-                            <td class="text-left">st Richa Ghosh b Radha Yadav</td>
-                            <td class="text-right">25</td>
-                            <td class="text-right">26</td>
-                            <td class="text-right">3</td>
-                            <td class="text-right">0</td>
-                            <td class="text-center">96.15</td>
-                        </tr> -->
                     </tbody>
                 </table>
 
                 <div class="extras">
                     <div class="left">Extras</div>
-                    <div class="extras-info">5 (b 0, lb 3, w 2, nb 0, p 0)</div>
+                    <div class="extras-info"></div>
                 </div>
 
                 <div class="extras">
                     <div class="left">Total </div>
-                    <div class="runs-info" >124 (9 wkts, 20 Ov)</div>    
+                    <div class="runs-info"></div>    
                 </div>
 
                 <table class="team2bowler">
                     <thead>
                         <tr>
-                            <th class="text-left">Bowler</th>
+                            <th class="text-left first-th">Bowler</th>
                             <th class="text-right">O</th>
                             <th class="text-right">M</th>
                             <th class="text-right">R</th>
@@ -94,16 +101,6 @@
                     </thead>
 
                     <tbody>
-                        <!-- <tr>
-                            <td>Deepti Sharama</td>
-                            <td class="text-right">4</td>
-                            <td class="text-right">2</td>
-                            <td class="text-right">25</td>
-                            <td class="text-right">1</td>
-                            <td class="text-right">2</td>
-                            <td class="text-right">1</td>
-                            <td class="text-center">6.25</td>
-                        </tr> -->
                     </tbody>
                 </table>
     
@@ -111,15 +108,15 @@
 
             <div class="t2scorecard">
                 <div class="total">
-                    <span id="t2name">CSK</span>
-                    <span id="t2score">124-9 (20 Over)</span>
+                    <span id="t2name"></span>
+                    <span id="t2score"></span>
                 </div>
 
                 <table class="team2batsman">
 
                     <thead>
                         <tr>
-                            <th class="text-left">Batter</th>
+                            <th class="text-left first-th" >Batter</th>
                             <th id="dismissal-text" class="text-right"></th>
                             <th id="R" class="text-right">R</th>
                             <th id="B" class="text-right">B</th>
@@ -131,32 +128,23 @@
                     
 
                     <tbody>
-                        <!-- <tr>
-                            <td id="batsman-name" class="text-left">Radha Yadav</td>
-                            <td class="text-left">st Richa Ghosh b Radha Yadav</td>
-                            <td class="text-right">25</td>
-                            <td class="text-right">26</td>
-                            <td class="text-right">3</td>
-                            <td class="text-right">0</td>
-                            <td class="text-center">96.15</td>
-                        </tr> -->
                     </tbody>
                 </table>
 
                 <div class="extras">
                     <div class="left">Extras</div>
-                    <div class="extras-info">5 (b 0, lb 3, w 2, nb 0, p 0)</div>
+                    <div class="extras-info"></div>
                 </div>
 
                 <div class="extras">
                     <div class="left">Total </div>
-                    <div class="runs-info" >124 (9 wkts, 20 Ov)</div>    
+                    <div class="runs-info"></div>    
                 </div>
 
                 <table class="team1bowler">
                     <thead>
                         <tr>
-                            <th class="text-left">Bowler</th>
+                            <th class="text-left first-th" >Bowler</th>
                             <th class="text-right">O</th>
                             <th class="text-right">M</th>
                             <th class="text-right">R</th>
@@ -168,23 +156,54 @@
                     </thead>
 
                     <tbody>
-                        <!-- <tr>
-                            <td>Deepti Sharama</td>
-                            <td class="text-right">4</td>
-                            <td class="text-right">2</td>
-                            <td class="text-right">25</td>
-                            <td class="text-right">1</td>
-                            <td class="text-right">2</td>
-                            <td class="text-right">1</td>
-                            <td class="text-center">6.25</td>
-                        </tr> -->
                     </tbody>
                 </table>
-    
             </div>
         </div>
     </div>
     
+    <div class="no-match">
+        <span>Scorecard is not available for this match or match is not started yet</span>
+    </div>
+
+    <footer>
+        <div class="container flex footer-container">
+            <div class="link-column flex">
+                <h4>MOBILE SITE & APPS</h4>
+                <a href="#" class="hover-link">www.criczone.com</a>
+                <a href="#" class="hover-link">IOS</a>
+                <a href="#" class="hover-link">android</a>
+    
+            </div>
+            <div class="link-column flex">
+                <h4>FOLLOW US ON </h4>
+                <a href="#" class="hover-link">facebook</a>
+                <a href="#" class="hover-link">Twitter</a>
+                <a href="#" class="hover-link">Instagram</a>
+                <a href="#" class="hover-link">telegram</a>
+    
+            </div>
+            <div class="link-column flex">
+                <h4>COMPANY</h4>
+                <a href="#" class="hover-link">Careers</a>
+                <a href="#" class="hover-link">Advertise</a>
+                <a href="#" class="hover-link">Privacy Policy</a>
+                <a href="#" class="hover-link">Terms of Use</a>
+                <a href="#" class="hover-link">CricZone TV Ads</a>
+    
+            </div>
+        </div>
+    </footer>
+    
+    <div class="subfooter">
+        <div class="container flex subfooter-container">
+            <a href="#" class="hover-link">Privacy policy</a>
+            <a href="#" class="hover-link">Terms & Condition</a>
+            <a href="#" class="hover-link">Security Information</a>
+            <a href="#" class="hover-link">.<i class="fa-brands fa-facebook"></i></a>
+            <a href="#" class="hover-link">.<i class="fa-brands fa-twitter"></i></a>
+        </div>
+    </div>
     <script src="/JS/scorecard.js"></script> 
   </body>
 </html>
